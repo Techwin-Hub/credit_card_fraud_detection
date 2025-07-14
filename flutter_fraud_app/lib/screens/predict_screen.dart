@@ -36,7 +36,7 @@ class _PredictScreenState extends State<PredictScreen> {
       for (var key in controllers.keys) key: double.parse(controllers[key]!.text)
     };
 
-    final url = Uri.parse('http://127.0.0.1:5000/predict');
+    final url = Uri.parse('http://10.0.2.2:5000/predict');
     final res = await http.post(url,
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(input));
